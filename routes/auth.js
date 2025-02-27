@@ -5,7 +5,7 @@ const authMiddleware = require('../middleware/auth');
 router.get('/google', authMiddleware.googleAuth);
 
 router.get('/google/callback', authMiddleware.googleCallback, (req, res) => {
-    res.redirect('/');
+    res.redirect('/dashboard');
 });
 
 router.get('/logout', authMiddleware.logout);
